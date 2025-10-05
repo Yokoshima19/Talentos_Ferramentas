@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Firebase Financial Dashboard</title>
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind (somente dev) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Custom Styles (Fonts, etc.) -->
-  <link rel="stylesheet" href="index.css" />
+  <!-- Babel Standalone for TSX/JSX transpilation -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-  <!-- ES Module Import Map for dependencies -->
+  <link rel="stylesheet" href="./index.css" />
+
+  <style>
+    body { background:#0f172a; color:#e5e7eb; }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -30,12 +34,11 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-<body class="min-h-screen bg-gray-900">
+<body class="min-h-screen">
   <div id="root"></div>
 
-  <!-- Main application entry point -->
-  <script type="module" src="index.tsx"></script>
-
+  <!-- Main app entry point -->
+  <script type="text/babel" data-type="module" data-presets="env,react,typescript" src="./index.tsx"></script>
 <script type="module" src="/index.tsx"></script>
 </body>
 </html>
